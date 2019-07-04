@@ -1,0 +1,203 @@
+.signup-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-white;
+    height: auto;
+    width: 84.2rem;
+    display: flex;
+
+    @include response(tab-port) {
+        width: 60rem;
+        padding-bottom: 3rem;
+    }
+
+    @include response(phone) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(0,0);
+        width: 100%;
+        height: 100%;
+    }
+
+    &--seller {
+        &__heading {
+            font-size: 2.2rem;
+            font-weight: 600;
+            
+            // @include response(phone) {
+            //     margin-left: -26rem;
+            //     margin-bottom: 2rem;
+            // } 
+            
+        }
+        .form__group {
+            margin-bottom: 1rem;
+
+            @include response(phone) {
+                margin-bottom: 3rem;
+            }
+        }
+
+        .form__label {
+            // font-size: .7rem;
+        }
+
+        .form__input {
+            font-size: .8rem;
+
+            @include response(phone) {
+                font-size: 1.8rem;
+            }   
+        }
+    }
+
+    &__picture {
+        // height: 46.2rem;
+        flex: 0 0 37rem;
+        background-image: linear-gradient(to right, rgba($color-black, .8), rgba($color-black, .2)), url("../../img/hoto.jpeg");
+        background-size: cover;
+        background-position: center;
+
+        @include response(tab-port) {
+            display: none;
+        }
+
+        &--contents {
+            width: 50%;
+            margin: 11rem 5rem;
+
+
+            &-seller {
+                width: 19.9rem;
+                margin: 18.4rem 5rem;
+            }
+
+            p {
+                letter-spacing:  0.04em;
+                font-family: "Source Sans Pro", inherit;
+                font-size: 1.2rem;
+            }
+
+            .down-part {
+                margin-top: 4rem;
+            }
+        }
+    }
+
+    &__content {
+        padding: 3rem 5rem 1rem 5rem;
+        @include response(tab-port) {
+            width: 100%;
+         }
+
+         @include response(phone) {
+             width: 80%;
+             margin-top: 18.6rem;
+
+             h2 {
+                 text-align: center;
+                 margin-bottom: 1.9rem;
+             }
+         }
+    }
+}
+
+.withgoogle {
+    background-color: $color-primary;
+    width: 31.5rem;
+    padding: .1rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    cursor: pointer;
+
+    @include response(tab-port) {
+        width: 100%;
+    }
+
+    .gbox {
+        display: flex;
+        padding: 1rem;
+        background: $color-white;
+        border-radius: 5px;
+        align-self: flex-start;
+    }
+
+    .text {
+        color: #fff;
+        font-family: inherit, "Source Sans Pro";
+        margin-left: 7.5rem;
+
+        @include response(tab-port) {
+            margin-left: 3rem;
+        }
+    }
+}
+
+.alternative {
+    display: flex;
+    // justify-items: center;
+    justify-content: center;
+    // background-color: red;
+    margin-top: 1.5rem;
+
+
+    .or {
+        position: relative;
+        color: $color-grey-dark-3;
+
+        @include response(tab-port) {
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: $color-grey-dark-2;
+            width: 5.2rem;
+            height: .1rem;
+            top: .7rem;
+            left: -6rem;
+
+            @include response(phone) {
+                left: -6rem;
+                top: .5rem;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background: $color-grey-dark-2;
+            width: 5.2rem;
+            height: .1rem;
+            top: .7rem;
+            right: -6rem;
+
+            @include response(phone) {
+                right: -6rem;
+                top: .5rem;
+            }
+        }
+    }
+}
+
+.show-on-mobile__logo {
+    @include response(big-desktop) { display: none; }
+    @include response(laptop) { display: none; }
+    @include response(tab-land) { display: none; }
+    @include response(phone) {
+        display: block;
+        text-align: center;
+        font-family: "Biryani", sans-serif;
+        font-weight: 900;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+}

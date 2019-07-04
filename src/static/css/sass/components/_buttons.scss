@@ -1,0 +1,77 @@
+.btn {
+    // &,
+    // &:link,
+    // &:visited, {
+    //         border: none;
+    //         padding: 1rem;
+    //         width: 100%;
+    //         color: $color-white;
+    //         border-radius: 5px;
+    //         outline: none;
+    //         cursor: pointer;
+    // }
+
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem;
+        display: inline-block;
+        transition: all .2s;
+        position: relative;
+        border: none;
+        cursor: pointer;
+    }
+
+    &--login {
+        width: 100%;
+        color: $color-white;
+        border-radius: 5px;
+    }
+
+
+    &--green {
+        background-color: $color-secondary;
+    }
+
+    &--yellow {
+        background-color: $color-tertiary;
+        color: $color-white;
+    }
+
+    &--white {
+        background-color: transparent;
+        border: 1px solid $color-white;
+        width: 8.8rem;
+        font-weight: 600;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: $color-white;
+        border-radius: 3px;
+    }
+
+    &--search {
+        padding: 1.5rem 4rem !important;
+        width: 8rem;
+        color: #fff;
+        border-radius: 2px;
+
+        @include response(phone) {
+            margin-top: 1rem;
+        }
+    }
+}
+
+.inventory-category__btn {
+    @include button(1.1rem, 4.1rem, 1.1rem, 3.7rem, $color-secondary, $color-white, 2px, $color-secondary);
+}
+
+.modal-admin-btn {
+    @include button(1.5rem, 5rem, 1.5rem, 5rem, $color-secondary, $color-white, 5px, $color-secondary);
+    width: 100%;
+
+    &--remove {
+        background-color: $color-error;
+        border: $color-error;
+    }
+}

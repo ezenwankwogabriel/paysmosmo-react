@@ -1,0 +1,368 @@
+// ********************************************** // 
+// ******************* FORMS ******************** //
+// ********************************************** // 
+
+.form {
+    margin-top: .5rem;
+    
+    &__group {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+
+            @include response(tab-port) { margin-bottom: 4rem;}
+        }
+
+        &-divide {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &--select {
+            padding: 0 4rem 0 0;
+            margin-top: 1rem;
+            border: none;
+            outline: none;
+            font-size: inherit;
+
+            &-seller {
+                width: 100%;
+                border-bottom: 1px solid $color-grey-light-1;
+                padding: 0 4rem .5rem 0;
+
+                @include response(phone) {
+                    background-color: $color-white;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+
+    &--seller .form__label {
+        color: $color-grey-dark-9;
+    }
+
+    &--seller .form__input::-webkit-input-placeholder {
+        color: $color-grey-dark-10;
+    }
+
+    &__btn {
+        background-color: $color-secondary;
+        // padding: 2rem 0 !important;
+        width: 100%;
+        text-align: center;
+        color: $color-white;
+        font-size: 1.1rem;
+    }
+
+    &__label {
+        display: block;
+    }
+
+
+
+    &--login {
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &--search {
+        display: flex;
+
+        @include response(phone) {
+            flex-wrap: wrap;
+        }
+        .search-icon {
+            background-color: $color-grey-light-3;
+            padding: 1rem .5rem 1rem 1rem;
+        }
+    }
+
+    &__input {
+        font-size: inherit;
+        font-family: inherit;
+        border: none;
+        padding: .5rem 1rem .5rem 0;
+        width: 100%;
+        border-bottom: 1px solid $color-grey-light-1;
+        color: $color-grey-dark-4;
+
+        @include response(tab-port) { 
+            font-size: 1.5rem;
+        }
+        &--transparent {
+            background-color: transparent;
+        }
+
+        &--profile {
+            padding-left: 3rem;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:focus:invalid {
+            border-bottom: 1px solid red;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark-4;
+        }
+
+    }
+
+
+    &__custominput {
+        font-size: inherit;
+        font-family: inherit;
+        border: none;
+        padding: .5rem 1rem .5rem 0;
+        width: 100%;
+        background-color: $color-grey-light-3;
+        color: $color-grey-dark-2;
+
+        @include response(phone) {
+            width: 65%;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark-2;
+        }
+
+    }
+}
+
+.checkbox-group {
+    position: relative;
+}
+
+.form__checkbox {
+    display: none;
+}
+
+.checkbox__text {
+    margin-left: 2rem;
+    color: $color-grey-light-2;
+
+    &--checkout {
+        margin-left: 3rem;
+        color: $color-grey-dark-6;
+        font-size: 1.2rem;
+    }
+}
+.checkbox__label {
+    cursor: pointer;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    top: 0;
+    left: .5rem;
+    background: $color-white;
+    border: 1px solid $color-grey-dark-2;
+
+    &--seller {
+        margin-left: 6rem;
+    }
+}
+
+.checkbox__label:after {
+    opacity: 0.2;
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 2px;
+    background: transparent;
+    top: 1px;
+    left: 2px;
+    border: 1px solid $color-grey-dark-1;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+}
+.checkout__checkbox__label {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: .5rem;
+    background: $color-white;
+    border: 1px solid $color-grey-dark-2;
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 0.5px solid $color-black;
+}
+
+.checkout__checkbox__label:after {
+    opacity: 0.2;
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: .3rem;
+    background: transparent;
+    top: 3px;
+    left: 2px;
+    border: 1px solid $color-secondary;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+}
+.checkbox__label:hover::after {
+    opacity: 0.5;
+}
+
+.form__checkbox:checked + label:after {
+    opacity: 1;
+}
+
+
+.quantity {
+    position: relative;
+    width: 100%;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button
+  {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type=number]
+  {
+    -moz-appearance: textfield;
+  }
+  
+  .quantity input {
+    width: 34px;
+    height: 14px;
+    line-height: 1.65;
+    float: left;
+    display: block;
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0px 4px 4px rgba(185, 185, 185, 0.25);
+    font-size: 1rem;
+  }
+  
+  .quantity input:focus {
+    outline: 0;
+  }
+  
+  .quantity-nav {
+    float: left;
+    position: relative;
+    height: 14px;
+  }
+  
+  .quantity-button {
+    position: relative;
+    cursor: pointer;
+    border-left: 1px solid $color-grey-dark-4   ;
+    background-color: #ECECEC;
+    width: 9px;
+    text-align: center;
+    color: #333;
+    font-size: 13px;
+    // font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    border-top-right-radius: 5px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+  
+  .quantity-button.quantity-up {
+    position: absolute;
+    height: 50%;
+    top: 0;
+    border-bottom: 1px solid $color-grey-dark-4;
+  }
+  
+  .quantity-button.quantity-down {
+    position: absolute;
+    bottom: -1px;
+    height: 50%;
+  }
+
+  .img-up, .img-down {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: .5rem;
+  }
+
+  .mobile-group {
+      display: flex;
+      margin-top: 1rem;
+
+      &__select {
+          border: none;
+          outline: none;
+          font-size: inherit;
+          position: relative;
+          border-right: .5px solid $color-grey-light-1;
+        //   margin-right: .2rem;
+          border-bottom: 1px solid $color-grey-light-1;
+          color: $color-grey-dark-9;
+
+          @include response(phone) {
+            background-color: $color-white;
+            font-size: 1.8rem;
+        }
+      }
+
+      .form__input {
+          padding-left: 1rem;
+      }
+  }
+
+  .mis {
+    margin-bottom: 1.5rem;
+  }
+
+  .selectBox {
+    position: relative;
+  }
+  
+  .selectBox select {
+    width: 100%;
+    // font-weight: bold;
+    border: none;
+    border-bottom: 1px solid $color-grey-light-1;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1rem;
+  }
+  
+  .overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+  #checkboxes {
+    display: none;
+    border: 1px #dadada solid;
+  }
+  
+  #checkboxes label {
+    display: block;
+    // padding: 2rem
+  }
+  
+  #checkboxes label:hover {
+    background-color: #1e90ff;
+  }

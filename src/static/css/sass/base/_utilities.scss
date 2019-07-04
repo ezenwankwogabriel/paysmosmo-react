@@ -1,0 +1,81 @@
+.grey-dark-1 {
+    color: $color-grey-dark-1;
+    font-size: 1.2rem;
+}
+
+.grey-dark-2 { color: $color-grey-dark-2; }
+
+.bottom-small { margin-bottom: 2rem !important; }
+.bottom-medium { margin-bottom: 4rem !important; }
+.bottom-big { margin-bottom: 6rem !important; }
+
+.top-small { margin-top: 2rem; }
+.top-medium { margin-top: 4rem; }
+.top-big { margin-top: 6rem; }
+
+.center { text-align: center; }
+
+.left-small { margin-left: 3rem; }
+.left-medium { margin-left: 5rem; }
+.left-big { margin-left: 7rem; }
+.left-huge { margin-left: 9rem; }
+
+.big-text { font-size: 1.6rem !important; }
+
+.white-text { color: #fff; }
+
+.lighten-text { font-weight: 300; }
+
+.float-left { float: left;}
+.float-right { float: right;}
+
+.grey-background { background-color: $color-grey-light-3; }
+.grey-light-background { background-color: $color-grey-light-9; }
+
+// .padd { padding: 1rem 8rem; }
+
+.transparent-background { background-color: transparent; }
+
+.shifterr {
+    padding: 1.9rem 7.6rem 0rem 10.1rem;
+
+    @include response(phone) {
+        padding: 1rem;
+    }
+}
+
+.hide-on-mobile {
+    @include response(phone) { display: none; }
+}
+
+.show-on-mobile-only {
+    display: none;
+    @include response(phone) { display: block; }
+}
+
+.new {
+    font-family: "Biryani", sans-serif;
+    font-size: 1.5rem;
+    color: $color-grey-dark-4;
+}
+
+a { 
+    text-decoration: none;
+    color: $color-primary;
+}
+
+.change-white {
+
+    @include response(phone) {
+        background-color: $color-white !important;
+    }
+}
+
+.red-color {
+    color: $color-error !important;
+}
+
+.small {
+    font-size: 1.2rem;
+    color: $color-grey-dark-3;
+}

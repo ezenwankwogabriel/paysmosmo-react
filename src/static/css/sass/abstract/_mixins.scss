@@ -1,0 +1,49 @@
+// I totally forgot to create a button mixin. I repeated too much code Damn!!!!!!!!!!!!!!!! I forgot Dont Repeay Yourself
+//(DRYYYYYYYYYYYYYYYYYYYYYYYYYYY)
+
+
+@mixin button($top, $right, $bottom, $left, $background, $color, $border-radius, $border-color) {
+        padding-top: $top;
+        padding-right: $right;
+        padding-bottom: $bottom;
+        padding-left: $left;
+        background-color: $background;
+        text-decoration: none;
+        display: inline-block;
+        transition: all .2s;
+        position: relative;
+        border: 1px solid $border-color;
+        color: $color;
+        border-radius: $border-radius;
+        cursor: pointer;
+        outline: none;
+}
+
+@mixin clearfix {
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+
+// media queries generator
+
+
+@mixin response($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content };
+    }
+
+    @if $breakpoint == tab-port {
+        @media  only screen and (max-width: 56.25em) { @content };
+    }
+
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content };
+    }
+
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content };
+    }
+}

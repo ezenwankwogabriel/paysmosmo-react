@@ -1,0 +1,90 @@
+.terms {
+
+    &__header {
+        @include  response(phone) {
+            display: none;
+        }   
+    }
+
+    &__navigation {
+        background-color: $color-white;
+        height: 4.6rem;
+        box-shadow: 0px 4px 4px rgba(159, 155, 155, 0.25);
+        z-index: 10;
+        position: relative;
+    }
+
+    &__list {
+        list-style: none;
+        float: right;
+    }
+    
+    &__item {
+        display: inline-block;
+        margin-right: 2rem;
+        padding: 1.5rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-grey-dark-5;
+        font-weight: 600;
+        font-size: 1.2rem;
+        letter-spacing: 0.04em;
+        font-family: "Source Sans Pro", sans-serif;
+
+        &--active {
+            color: $color-secondary;
+            position: relative;
+            
+            &::before {
+                content: "";
+                position: absolute;
+                top:0;
+                left: -2.5rem;
+                height: 1.75rem;
+                border: .5px solid #4E5051;
+            }
+        }
+    }
+
+    &__tab-navigation {
+        border-bottom: 2px solid $color-grey-light-2;
+        margin-bottom: 7.1rem;
+
+        &__list {
+            list-style: none;
+            width: 100%;
+            // margin-left: 10.5rem;
+            padding: 0 0 2rem 0;
+        }
+
+        &__item {
+            display: inline-block;
+            padding: 1rem 3rem 0rem 0rem;
+            
+            &:first-child {
+                margin-left: 10rem;
+            }
+        }
+
+        &__link {
+            text-decoration: none;
+            color: $color-grey-dark-3;
+            font-size: 1.4rem;
+            padding-bottom: 2rem;
+
+            &--active {
+                border-bottom: 2px solid $color-secondary;
+            }
+        }
+    }
+
+    &__contents {
+
+        @include response(tab-land) {
+            margin: 0 5rem;
+        }
+    }
+    
+}

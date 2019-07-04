@@ -1,0 +1,139 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: $color-grey-dark-1;
+    font-size: 1.2rem;
+
+    @include response(phone) {
+        display: none;
+    }
+
+    &__copyright {
+        margin-left: 5rem;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        display: inline-block;
+        padding: 3rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-grey-dark-1;
+        font-size: 1.2rem;
+    }
+}
+
+.main-footer {
+
+    @include  response(phone) {
+        display: none;
+    }
+    color: $color-grey-light-4;
+
+    &__header {
+        display: flex;
+        padding: 5rem;
+        background-color: $color-grey-dark-6;
+        justify-content: space-around;
+    }
+
+    &__basicInfo { 
+        width: 17.7rem;
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__contact {
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            font-family: 'Open Sans', sans-serif;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        margin-top: 1.9rem;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+
+        &--social { 
+            display: inline-block;
+            
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+
+            &:nth-child(1):hover {
+                //Facebook hover
+            }
+
+            &:nth-child(2):hover {
+                //Twitter hover
+            }
+
+            &:nth-child(1):hover {
+                //Instagram hover
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-grey-light-4;
+        font-size: 1.2rem;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    &__help {
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            font-family: 'Open Sans', sans-serif;
+        }
+    }
+
+    &__social {}
+
+    &__back {
+        position: relative;
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        &--icon {
+            height: 2.25rem;
+            width: 2.25rem;
+            fill: currentColor;
+            position: absolute;
+            top: -.1rem;
+            left: 8rem;
+        }
+    }
+
+    &__footer {
+        background-color: $color-grey-dark-7;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+}

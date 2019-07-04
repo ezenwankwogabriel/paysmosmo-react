@@ -1,0 +1,68 @@
+.error-message {
+    font-family: "Source Sans Pro", sans-serif;
+    color: $color-invalid;
+}
+.forget__label {
+    color: $color-grey-dark-4;
+    font-family: "Open Sans", inherit;
+    font-size: .7rem;
+}
+
+.header-skip {
+    padding: 2rem;
+    align-self: flex-start;
+    display: flex;
+    order: 2;
+    justify-content: flex-end;
+
+    h2 {
+        font-size: 1.2rem;
+        color: $color-grey-dark-1;
+        font-family: "Source Sans Pro";
+        cursor: pointer;
+    }
+}
+
+.heading__primary {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: justify;
+    color: $color-grey-dark-6;
+    margin-bottom: 2.5rem;
+    margin-top: 3.7rem;
+}
+
+.heading__secondary {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    line-height: 1.2rem;
+    font-size: 1rem;
+    color: $color-black;
+}
+.normal-text {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+    text-align: justify;
+    color: $color-black;
+}
+
+.normal-link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: $color-grey-light-4;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.shoe-text {
+    font-weight: 600;
+    font-family: inherit;
+    font-size: 1.2rem;
+    color: inherit;
+}
+
+.seeall {
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+}

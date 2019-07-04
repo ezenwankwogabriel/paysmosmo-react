@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::after, 
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @include response(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include response(tab-port) {
+        font-size: 50%;
+    }
+
+    @include response(phone) {
+        font-size: 40%;
+    }
+
+    @include response(big-desktop) {
+        font-size: 75%;
+    }
+}
+
+body {
+    font-family: 'Biryani', sans-serif;
+}
+
